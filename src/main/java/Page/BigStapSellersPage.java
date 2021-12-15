@@ -9,13 +9,13 @@ import org.openqa.selenium.support.FindBy;
 
 public class BigStapSellersPage extends BasePage {
 
-    @FindBy(css = "#root > main > div > div > div > div > div > div > div.trading-page.trading-page_view_standard > div.trading-page__column.trading-page__column_position_right > div.place-order > div.place-order__content > div:nth-child(4) > div > button")
+    @FindBy(xpath = "//div[@class='place-order__content']/div[@class='place-order__text-input']/div[@class='best-price']/button")
     private WebElement nicePrice;
 
     @FindBy(css = "#root > main > div > div > div > div > div > div > div.trading-page.trading-page_view_standard > div.trading-page__column.trading-page__column_position_right > div.place-order > div.place-order__content > div:nth-child(5) > div > div > div > input")
     private WebElement inputValues;
 
-    @FindBy(css = "#root > main > div > div > div > div > div > div > div.trading-page.trading-page_view_standard > div.trading-page__column.trading-page__column_position_right > div.place-order > div.place-order__content > div.place-order__button > button")
+    @FindBy(xpath = "//*[text()='Купить BTC']")
     private WebElement acceptButton;
 
     @FindBy(css = "div > div > div > div > div > div > div.notification-card__card-content")
