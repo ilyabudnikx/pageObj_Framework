@@ -12,6 +12,7 @@ public class BigStepHomePage extends BasePage{
     private static final String PAGE_URL = "https://bitsgap.com/sign-in/?d=app";
 
     @FindBy(xpath = "//*[@id=\"login-form\"]/button")
+
     private WebElement logInButton;
 
     public BigStepHomePage(WebDriver driver) {

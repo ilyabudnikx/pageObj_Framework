@@ -15,20 +15,16 @@ public class DriverSingleton {
     private DriverSingleton(){}
 
     public static WebDriver getDriver(){
-        if (null == driver) {
-            switch (System.getProperty("browser")){
+        if (driver == null) {
+            switch (System.getProperty("browser" , "")){
                 case "firefox": {
                     WebDriverManager.firefoxdriver().setup();
-                    FirefoxOptions options = new FirefoxOptions();
-                    options.setPageLoadStrategy(PageLoadStrategy.EAGER);
-                    driver = new FirefoxDriver(options);
+                    driver = new FirefoxDriver();
                     break;
                 }
                 default: {
                     WebDriverManager.chromedriver().setup();
-                    ChromeOptions options= new ChromeOptions();
-                    options.setPageLoadStrategy(PageLoadStrategy.EAGER);
-                    driver = new ChromeDriver(options);
+                    driver = new ChromeDriver();
                     break;
                 }
             }
